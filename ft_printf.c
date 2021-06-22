@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 16:49:11 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/06/15 22:41:23 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/06/18 00:31:58 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ int	ft_printf(const char *str, ...)
 	va_list		ap;
 	int			i;
 	const char	*input;
+	t_stru		*stru;
 
 	i = 0;
+	stru->flags.dot = 1;
 	va_start(ap, str);
 	input = str;
 	if (ft_strchr(input, '%') == NULL)

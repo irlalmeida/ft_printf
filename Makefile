@@ -6,7 +6,7 @@
 #    By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/09 14:30:09 by iribeiro          #+#    #+#              #
-#    Updated: 2021/06/15 22:52:56 by iribeiro         ###   ########.fr        #
+#    Updated: 2021/06/21 21:25:30 by iribeiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,5 +30,10 @@ fclean: clean
 		rm -f $(NAME)
 
 re: fclean all
+
+git: 
+	@git add .
+	@git commit -m "$m"
+	@git push
 
 .PHONY: 	all clean fclean re
