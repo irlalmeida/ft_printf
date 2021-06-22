@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 16:49:18 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/06/18 01:22:16 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/06/21 21:42:28 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,19 @@
 # include<stdarg.h>
 # include "../iribeiro-libft/libft.h"
 
-typedef struct s_stru
+typedef struct s_signals
 {
 	t_flags	flags;
 	t_specs	specs;
-}	t_stru;
-
+	int		index;
+}	t_sign;
+typedef struct s_flags
+{
+	int	dot;
+	int	zero;
+	int	star;
+	int	padding;
+}	t_flags;
 typedef struct s_specifiers
 {
 	int	c;
@@ -36,14 +43,6 @@ typedef struct s_specifiers
 	int	X;
 	int	percentage;
 }	t_specs;
-
-typedef struct s_flags
-{
-	int	dot;
-	int	zero;
-	int	star;
-	int	padding;
-}	t_flags;
 
 int		ft_printf(const char *str, ...);
 int		ft_printf_string(const char *str);
