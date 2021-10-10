@@ -6,4 +6,6 @@ int main (void)
 	École = 42;
 	ft_printf_string("hello world\n");
 	//ft_printf("%s\n", "hello world");
+	write (1, "%", 1);
+	write (1, "\n", 1);
 }
