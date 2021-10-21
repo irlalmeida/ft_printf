@@ -6,11 +6,12 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 16:49:11 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/10/09 14:22:00 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/10/18 20:46:17 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "../iribeiro-libft/libft.h"
 
 //void	set_to_zero(t_sign *sign)
 //{
@@ -43,7 +44,7 @@ int	ft_printf(const char *str, ...)
 			if ((str [i] != '%') && (str [i - 1] != '%'))
 				ft_printf_char(str[i]);
 			else
-				check_cases(str, i);
+				check_cases(str, i, ap);
 			i++;
 		}
 	}
