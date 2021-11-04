@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 16:49:18 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/10/18 20:43:12 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/11/03 22:44:23 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,9 @@ typedef struct s_signals
 
 int		ft_printf(const char *str, ...);
 int		ft_printf_string(const char *str);
-void	ft_printf_int(long int n);
+int		ft_printf_int(long int n);
 int		ft_printf_char(const char str);
-void	check_cases(const char *str, int i, va_list ap);
+int		check_cases(const char *str, int i, va_list ap);
+int		char_s(char *str);
 
 #endif

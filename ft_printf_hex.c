@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 12:30:14 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/06/04 12:34:12 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/11/03 22:50:13 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_printf_hex(int hex)
 		if (convert_num < 10)
 		{
 			convert_num = convert_num + 48;
-			
 		}	
 	}
+	return (0);
 }

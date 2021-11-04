@@ -6,13 +6,13 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/03 12:42:11 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/10/09 14:26:26 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/11/03 22:50:20 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_printf_int(long int n)
+int	ft_printf_int(long int n)
 {
 	int			num[11];
 	int			num_count;
@@ -39,4 +39,5 @@ void	ft_printf_int(long int n)
 		write(1, &num[num_count], 1);
 		num_count--;
 	}
+	return (0);
 }

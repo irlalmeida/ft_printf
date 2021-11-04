@@ -6,7 +6,7 @@
 #    By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/09 14:30:09 by iribeiro          #+#    #+#              #
-#    Updated: 2021/06/21 21:25:30 by iribeiro         ###   ########.fr        #
+#    Updated: 2021/11/03 22:57:11 by iribeiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,8 @@ all: $(NAME)
 
 $(NAME): $(INCLUDES)
 		@gcc $(CFLAGS) -c $(SRC)
+		make -C iribeiro-libft
+		cp iribeiro-libft/libft.a $(NAME)
 		@ar rc $(NAME) $(OBJ)
 
 clean: 

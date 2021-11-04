@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 16:49:11 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/10/18 20:46:17 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/11/03 22:51:01 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int	ft_printf(const char *str, ...)
 	va_list		ap;
 	int			i;
 	const char	*input;
-	t_sign		*sign;
 
 	i = 0;
 	va_start(ap, str);
