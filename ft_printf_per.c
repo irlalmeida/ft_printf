@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   char_s.c                                           :+:      :+:    :+:   */
+/*   ft_printf_per.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 20:13:53 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/11/14 23:59:07 by coder            ###   ########.fr       */
+/*   Created: 2021/11/14 20:07:46 by coder             #+#    #+#             */
+/*   Updated: 2021/11/14 20:56:55 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "iribeiro-libft/libft.h"
 
-int	char_s(char *str)
+int	ft_printf_per()
 {
-	int i;
-
-	i = 0;
-	if (!str)
-		return (char_s("(null)"));
-	while (*str)
-	{
-		write(1, str, 1);
-		str++;
-		i++;
-	}
-	return (i);
+	return (write (1, "%", 1));
 }

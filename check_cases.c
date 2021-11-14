@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 23:56:26 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/11/14 17:52:46 by coder            ###   ########.fr       */
+/*   Updated: 2021/11/14 23:06:42 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	check_cases(const char *str, int i, va_list ap)
 {
-	if ((str [i] == '%') && (str [i - 1] != '%'))
+	if (str [i] == '%')
 	{
 		if (str [i + 1] == 'c')
 			return (ft_printf_char(va_arg(ap, int)));
@@ -34,7 +34,7 @@ int	check_cases(const char *str, int i, va_list ap)
 		else if (str [i + 1] == 'X')
 			;
 		else if (str [i + 1] == '%')
-			write (1, "%", 1);
+			return (ft_printf_per());
 	}
 	return (0);
 }

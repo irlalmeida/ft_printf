@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 16:49:11 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/11/14 18:28:35 by coder            ###   ########.fr       */
+/*   Updated: 2021/11/14 23:35:43 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,24 +45,26 @@ int	ft_printf(const char *str, ...)
 	va_list		ap;
 	int			i;
 	const char	*input;
+	int 		returned;
 
 	i = 0;
+	returned = 0;
 	va_start(ap, str);
 	input = str;
 	if (ft_strchr(input, '%') == NULL)
 		ft_printf_string(str);
 	else
 	{	
-		while (str && str[i])
+		while (str[i])
 		{
 			if ((str [i] != '%') && (str [i - 1] != '%'))
-				ft_printf_char(str[i]);
+				returned = ft_printf_char(str[i]) + returned;
 			else
-				check_cases(str, i, ap);
-			i++;
+				returned = check_cases(str, i, ap) + returned;
+	        i++;
 		}
-		return (--i);
+		return (returned);
 	}
 	va_end(ap);
-	return (0);
+	return (ft_strlen(str));
 }
