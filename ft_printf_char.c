@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_char.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 16:51:49 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/06/03 22:21:08 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/11/14 18:23:57 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 int	ft_printf_char(const char str)
 {
-	write(1, &str, 1);
-	return (0);
+	return (write(1, &str, 1));
 }	

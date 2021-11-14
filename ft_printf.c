@@ -3,27 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 16:49:11 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/11/03 22:51:01 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/11/14 18:28:35 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "../iribeiro-libft/libft.h"
+#include "iribeiro-libft/libft.h"
 
-//void	set_to_zero(t_sign *sign)
-//{
-//	sign->specs.c = 0;
-//	sign->specs.p = 0;
-//	sign->specs.s = 0;
-//	sign->specs.d_i = 0;
-//	sign->specs.u = 0;
-//	sign->specs.x = 0;
-//	sign->specs.x_u = 0;
-//	sign->index = 0;
-//}
+char	*ft_strchr(const char *s, int c)
+{
+	int counter;
+
+	counter = 0;
+	while (s[counter] != '\0' || s[counter] == (char)c)
+	{
+		if (s[counter] == (char)c)
+			return (char *)s + counter;
+		counter++;
+	}
+	s = NULL;
+	return (char *)s;
+}
+
+size_t	ft_strlen(const char *str)
+{
+	int counter;
+
+	counter = 0;
+	while (str[counter])
+	{
+		counter++;
+	}
+	return (counter);
+}
 
 int	ft_printf(const char *str, ...)
 {
@@ -46,6 +61,7 @@ int	ft_printf(const char *str, ...)
 				check_cases(str, i, ap);
 			i++;
 		}
+		return (--i);
 	}
 	va_end(ap);
 	return (0);

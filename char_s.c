@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   char_s.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 20:13:53 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/11/03 22:49:57 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/11/14 17:52:56 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "../iribeiro-libft/libft.h"
+#include "iribeiro-libft/libft.h"
 
 int	char_s(char *str)
 {
