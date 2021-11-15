@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 00:49:33 by coder             #+#    #+#             */
-/*   Updated: 2021/11/15 03:06:59 by coder            ###   ########.fr       */
+/*   Updated: 2021/11/15 03:53:34 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,8 +98,7 @@ char	*ft_itoa(int n)
 		nbr_n /= 10;
 		len++;
 	}
-	if (!(num = find_num(n, &len)))
-		return (NULL);
+	num = find_num(n, &len);
 	if (n < 0)
 		nbr = (nbr * (-1));
 	while (((len--) > 0) && (nbr != 0))

@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 00:49:33 by coder             #+#    #+#             */
-/*   Updated: 2021/11/15 02:33:20 by coder            ###   ########.fr       */
+/*   Updated: 2021/11/15 03:39:04 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,7 @@ char	*ft_itoa_xxp(unsigned long long n, int l)
 		nbr_n /= 16;
 		len++;
 	}
-	if (!(num = find_num_u(&len)))
-		return (NULL);
+	num = (char *)ft_calloc_printf((len + 1), sizeof(char));
 	while (((len--) > 0) && (nbr != 0))
 	{
 		if (nbr % 16 < 10)
