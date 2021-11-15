@@ -6,7 +6,7 @@
 #    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/09 14:30:09 by iribeiro          #+#    #+#              #
-#    Updated: 2021/11/15 00:57:12 by coder            ###   ########.fr        #
+#    Updated: 2021/11/15 02:45:35 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ fclean: clean
 re: fclean all
 
 git: 
-	@git add .
+	@git add *.c *.h Makefile
 	@git commit -m "$m"
 	@git push
 

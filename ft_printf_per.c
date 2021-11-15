@@ -6,14 +6,13 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 20:07:46 by coder             #+#    #+#             */
-/*   Updated: 2021/11/15 02:04:52 by coder            ###   ########.fr       */
+/*   Updated: 2021/11/15 03:21:45 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_per()
+int	ft_printf_per(void)
 {
 	return (write (1, "%", 1));
-	
 }
