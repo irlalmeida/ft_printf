@@ -6,12 +6,11 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 20:13:53 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/11/14 23:59:07 by coder            ###   ########.fr       */
+/*   Updated: 2021/11/15 02:32:10 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "iribeiro-libft/libft.h"
 
 int	char_s(char *str)
 {

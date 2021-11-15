@@ -3,26 +3,25 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/09 14:30:09 by iribeiro          #+#    #+#              #
-#    Updated: 2021/11/03 22:57:11 by iribeiro         ###   ########.fr        #
+#    Updated: 2021/11/15 00:57:12 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-SRC = *.c 
+SRC = *.c
 OBJ = $(SRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
 INCLUDES = ft_printf.h
 
 all: $(NAME)
 
-$(NAME): $(INCLUDES)
-		@gcc $(CFLAGS) -c $(SRC)
-		make -C iribeiro-libft
-		cp iribeiro-libft/libft.a $(NAME)
+$(NAME): $(SRC)
+		rm -f $(NAME)
+		@gcc $(CFLAGS) -c $(SRC) 
 		@ar rc $(NAME) $(OBJ)
 
 clean: 

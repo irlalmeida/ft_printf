@@ -3,26 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_hex.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/04 12:30:14 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/11/03 22:50:13 by iribeiro         ###   ########.fr       */
+/*   Created: 2021/11/15 01:21:04 by coder             #+#    #+#             */
+/*   Updated: 2021/11/15 02:27:19 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_hex(int hex)
+int ft_printf_hex(unsigned int num, int letter)
 {
-	int	convert_num;
+	int i;
+	char *hex;
 
-	if (hex > 0)
-	{
-		convert_num = hex % 16;
-		if (convert_num < 10)
-		{
-			convert_num = convert_num + 48;
-		}	
-	}
-	return (0);
+	hex = ft_itoa_xxp(num, letter);
+	i = char_s(hex);
+	free (hex);
+	return (i);
 }

@@ -6,12 +6,11 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 16:49:11 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/11/14 23:35:43 by coder            ###   ########.fr       */
+/*   Updated: 2021/11/15 02:32:37 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "iribeiro-libft/libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -57,10 +56,13 @@ int	ft_printf(const char *str, ...)
 	{	
 		while (str[i])
 		{
-			if ((str [i] != '%') && (str [i - 1] != '%'))
-				returned = ft_printf_char(str[i]) + returned;
-			else
+			if ((str [i] == '%') && ft_strchr("cspdiuxX%", str[i+1]))
+			{
 				returned = check_cases(str, i, ap) + returned;
+				i=i+1;
+			}
+			else
+				returned = ft_printf_char(str[i]) + returned;
 	        i++;
 		}
 		return (returned);

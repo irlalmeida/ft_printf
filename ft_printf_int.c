@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_int.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/03 12:42:11 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/11/03 22:50:20 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/11/15 02:29:06 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,11 @@
 
 int	ft_printf_int(long int n)
 {
-	int			num[11];
-	int			num_count;
-	long int	long_num;
+	int		i;
+	char	*s;
 
-	long_num = n;
-	num_count = 0;
-	if (long_num < 0)
-	{
-		long_num = -long_num;
-		write(1, "-", 1);
-	}
-	if (long_num == 0)
-		write(1, "0", 1);
-	while (long_num > 0)
-	{
-		num[num_count] = long_num % 10 + '0';
-		long_num = long_num / 10;
-		num_count++;
-	}
-	num_count--;
-	while (num_count >= 0)
-	{
-		write(1, &num[num_count], 1);
-		num_count--;
-	}
-	return (0);
+	s = ft_itoa(n);
+	i = char_s(s);
+	free (s);
+	return (i);
 }
